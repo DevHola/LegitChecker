@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  mongodb:
+    image: mongo:6.0
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=adminUser
+      - MONGO_INITDB_ROOT_PASSWORD=adminPassword
+  
+  nodeapp:
+    build: .
+    container_name: legitchecker
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=5000
+      - mongouri = mongodb://adminUser:adminPassword@mongodb:27017/?authMechanism=DEFAULT&authSource=legislationDB
+    depends_on:
+      - mongodb
+  
+volumes:
+  mongodb:

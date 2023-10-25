@@ -1,0 +1,36 @@
+{
+  "name": "legitchecker",
+  "version": "1.0.0",
+  "description": "a software aimed at the legilators. all legilators submit bills, prevent resubmition of bill that have already been submited before under a new title of same content ,track stages a bill or legilation has passed and track whether the bill was adopted or dropped",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "Ibrahim Fawaz Olamide",
+  "license": "ISC",
+  "dependencies": {
+    "@levminer/speakeasy": "^1.4.2",
+    "bcrypt": "^5.1.1",
+    "bull": "^4.11.3",
+    "bullmq": "^4.8.0",
+    "compute-cosine-similarity": "^1.0.0",
+    "cors": "^2.8.5",
+    "cosine-similarity": "^1.0.1",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "jaccard": "^0.4.0",
+    "jsonwebtoken": "^9.0.2",
+    "minhash": "^0.0.9",
+    "mongoose": "^7.5.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "natural": "^6.7.0",
+    "nodemailer": "^6.9.5",
+    "nodemon": "^3.0.1",
+    "pdf-parse": "^1.1.1",
+    "pdfjs-dist": "^3.10.111",
+    "stopword": "^2.0.8",
+    "string-similarity": "^4.0.4"
+  }
+}
